@@ -108,7 +108,7 @@ def _start(parallel, profile, cluster_id):
          "--%s.cores=%s" % (engine_class, parallel["cores_per_job"]),
          "--IPClusterStart.controller_launcher_class=%s.%s" % (ns, controller_class),
          "--IPClusterStart.engine_launcher_class=%s.%s" % (ns, engine_class),
-         "--%sLauncher.queue=%s" % (scheduler, parallel["queue"]),
+         #"--%sLauncher.queue=%s" % (scheduler, parallel["queue"]),
          ])
 
 def _stop(profile, cluster_id):

@@ -19,9 +19,11 @@ import sys
 import yaml
 
 remotes = {"system_config":
-           "https://raw.github.com/chapmanb/bcbio-nextgen/master/config/bcbio_system.yaml",
+           #"https://raw.github.com/chapmanb/bcbio-nextgen/master/config/bcbio_system.yaml",
+           "https://raw.github.com/kevyin/bcbio-nextgen/master/config/bcbio_system.yaml",
            "requirements":
-           "https://raw.github.com/chapmanb/bcbio-nextgen/master/requirements.txt",
+           #"https://raw.github.com/chapmanb/bcbio-nextgen/master/requirements.txt",
+           "https://raw.github.com/kevyin/bcbio-nextgen/master/requirements.txt",
            "virtualenv":
            "https://raw.github.com/pypa/virtualenv/master/virtualenv.py"}
 
@@ -140,7 +142,8 @@ def get_cloudbiolinux():
     base_dir = os.path.join(os.getcwd(), "cloudbiolinux")
     if not os.path.exists(base_dir):
         subprocess.check_call(["git", "clone",
-                               "git://github.com/chapmanb/cloudbiolinux.git"])
+                               #"git://github.com/chapmanb/cloudbiolinux.git"])
+                               "https://github.com/kevyin/cloudbiolinux.git"])
     return {"fabricrc": os.path.join(base_dir, "config", "fabricrc.txt"),
             "biodata": os.path.join(base_dir, "config", "biodata.yaml"),
             "tool_fabfile": os.path.join(base_dir, "fabfile.py"),
